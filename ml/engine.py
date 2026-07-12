@@ -231,109 +231,175 @@ class DomiRecEngine:
 
     def build_or_load_indices(self, force_rebuild=False):
         """
-        Startup sequence:
-        1. Scan datasets folder.
-        2. Identify new or modified items using hash matching.
-        3. Load existing indexes or build them.
+        Startup sequence (production-optimised):
+        ─────────────────────────────────────────
+        FAST PATH  (normal Render deployment)
+          All .faiss files are committed to git and present on disk.
+          We skip model loading entirely and just call faiss.read_index().
+          Startup time: ~2 seconds.
+
+        SLOW PATH  (first run / force_rebuild / missing index files)
+          Load SentenceTransformer, scan datasets, compute embeddings,
+          build FAISS indices, save to disk.
+          Startup time: 30–120 seconds depending on hardware.
         """
         _lazy_imports()
-        self.load_model()
-        
+
+        # ── Step 1: Scan datasets to know which domains exist ───────────────
+        print("[DomiRec] Scanning datasets...")
         domain_items = self.scan_datasets()
+        if not domain_items:
+            print("[DomiRec] WARNING: No domain datasets found. Check data/ directory.")
+            return
+
+        # ── Step 2: Fast-path check ─────────────────────────────────────────
+        # If every domain already has a .faiss index file on disk and we are
+        # NOT forcing a rebuild, skip model loading and just read the indices.
+        if not force_rebuild:
+            all_indices_present = all(
+                os.path.exists(os.path.join(self.embeddings_dir, f"index_{dom.lower()}.faiss"))
+                for dom in domain_items
+            )
+            embeddings_cache_present = os.path.exists(
+                os.path.join(self.embeddings_dir, "embeddings_cache.pkl")
+            )
+
+            if all_indices_present and embeddings_cache_present:
+                print("[DomiRec] All FAISS indices found on disk — using fast-path load.")
+                _lazy_imports()  # imports faiss module
+                embeddings_cache = self.load_embeddings_cache()
+
+                for domain, items in domain_items.items():
+                    domain_key = domain.lower()
+                    self.metadata[domain_key] = items
+                    index_path = os.path.join(self.embeddings_dir, f"index_{domain_key}.faiss")
+
+                    # Load embeddings matrix from cache for NumPy fallback
+                    domain_embs = []
+                    for item in items:
+                        item_id = item["id"]
+                        cached = embeddings_cache.get(item_id)
+                        if cached:
+                            domain_embs.append(cached[0])
+                        else:
+                            domain_embs.append(np.zeros(384))
+
+                    if domain_embs:
+                        self.embeddings_matrices[domain_key] = np.array(domain_embs)
+
+                    # Load FAISS index
+                    if faiss is not None:
+                        try:
+                            self.indices[domain_key] = faiss.read_index(index_path)
+                            print(f"[DomiRec] Loaded FAISS index: {domain} ({len(items)} items)")
+                        except Exception as e:
+                            print(f"[DomiRec] ERROR reading FAISS index for '{domain}': {e}")
+                            self.indices[domain_key] = None
+                    else:
+                        self.indices[domain_key] = None
+                        print(f"[DomiRec] FAISS unavailable — NumPy fallback for '{domain}'")
+
+                    # Load PCA model if available
+                    pca_path = os.path.join(self.models_dir, f"pca_{domain_key}.pkl")
+                    if os.path.exists(pca_path):
+                        try:
+                            with open(pca_path, "rb") as f:
+                                self.pcas[domain_key] = pickle.load(f)
+                        except Exception:
+                            pass
+
+                print("[DomiRec] Engine initialization complete (fast-path).")
+                return
+
+        # ── Step 3: Slow path — load model and rebuild ──────────────────────
+        print("[DomiRec] Building/rebuilding FAISS indices (slow-path)...")
+        self.load_model()
+
         embeddings_cache = self.load_embeddings_cache()
         cache_updated = False
-        
-        print("Processing datasets and generating embeddings offline...")
-        
+
         for domain, items in domain_items.items():
             domain_key = domain.lower()
             self.metadata[domain_key] = items
-            
-            # Check if we need to rebuild the index for this domain
-            # We rebuild if force_rebuild is True, or if the index files are missing,
-            # or if any item in this domain is not in our cache or has a different hash.
-            rebuild_domain = force_rebuild or (domain_key not in self.indices)
-            
-            # Find embeddings for each item in this domain
+
+            rebuild_domain = force_rebuild
+            index_path = os.path.join(self.embeddings_dir, f"index_{domain_key}.faiss")
+            if not os.path.exists(index_path):
+                rebuild_domain = True
+
+            # Generate or retrieve embeddings from cache
             domain_embs = []
             for item in items:
                 item_id = item["id"]
                 item_text = self._prepare_text_for_embedding(item)
                 text_hash = hashlib.sha256(item_text.encode('utf-8')).hexdigest()
-                
-                # Check cache
+
                 cached_data = embeddings_cache.get(item_id)
                 if cached_data and cached_data[1] == text_hash:
                     emb = cached_data[0]
                 else:
-                    print(f"Generating embedding for: '{item['title']}'...")
+                    print(f"[DomiRec] Generating embedding: '{item['title']}'")
                     emb = self.get_embedding(item_text)
                     embeddings_cache[item_id] = (emb, text_hash)
                     cache_updated = True
                     rebuild_domain = True
-                    
+
                 domain_embs.append(emb)
-                
-            if len(domain_embs) > 0:
+
+            if domain_embs:
                 self.embeddings_matrices[domain_key] = np.array(domain_embs)
             else:
                 self.embeddings_matrices[domain_key] = np.empty((0, 384))
-                
-            # Build index if required
-            index_path = os.path.join(self.embeddings_dir, f"index_{domain_key}.faiss")
-            
+
+            # Load existing FAISS index if no rebuild needed
             if not rebuild_domain and os.path.exists(index_path) and faiss is not None:
                 try:
                     self.indices[domain_key] = faiss.read_index(index_path)
-                    print(f"Loaded existing FAISS index for domain '{domain}' successfully.")
+                    print(f"[DomiRec] Loaded FAISS index: {domain}")
+                    continue
                 except Exception as e:
-                    print(f"Error reading index for '{domain}': {e}. Rebuilding...")
+                    print(f"[DomiRec] Error reading FAISS index for '{domain}': {e}. Rebuilding...")
                     rebuild_domain = True
-                    
-            if rebuild_domain and len(domain_embs) > 0:
-                print(f"Building/updating index for domain '{domain}' with {len(items)} items...")
-                
-                # PCA coordinates per domain
+
+            if rebuild_domain and domain_embs:
+                print(f"[DomiRec] Building FAISS index: {domain} ({len(items)} items)")
+
+                # PCA projection
                 if PCA is not None and len(items) >= 2:
                     try:
                         pca_model = PCA(n_components=2)
                         coords_2d = pca_model.fit_transform(self.embeddings_matrices[domain_key])
                         self.pcas[domain_key] = pca_model
-                        
-                        # Save PCA model
                         pca_path = os.path.join(self.models_dir, f"pca_{domain_key}.pkl")
                         with open(pca_path, "wb") as f:
                             pickle.dump(pca_model, f)
-                            
-                        # Add x,y to items
                         for idx, coord in enumerate(coords_2d):
                             items[idx]["x"] = float(coord[0])
                             items[idx]["y"] = float(coord[1])
                     except Exception as e:
-                        print(f"Failed to fit PCA for domain {domain}: {e}")
+                        print(f"[DomiRec] PCA failed for {domain}: {e}")
                 else:
-                    # Dummy projection coords
                     for idx, item in enumerate(items):
                         item["x"] = float(idx % 5)
                         item["y"] = float(idx // 5)
-                        
-                # Create FAISS Index
+
+                # Build and save FAISS index
                 if faiss is not None:
                     dim = self.embeddings_matrices[domain_key].shape[1]
                     index = faiss.IndexFlatIP(dim)
                     index.add(self.embeddings_matrices[domain_key].astype('float32'))
                     self.indices[domain_key] = index
                     faiss.write_index(index, index_path)
-                    print(f"Saved FAISS index for '{domain}' successfully.")
+                    print(f"[DomiRec] Saved FAISS index: {domain}")
                 else:
                     self.indices[domain_key] = None
-                    print(f"FAISS not available. Using NumPy search for '{domain}'.")
-                    
+                    print(f"[DomiRec] FAISS unavailable — NumPy fallback for '{domain}'")
+
         if cache_updated:
             self.save_embeddings_cache(embeddings_cache)
-            print("Embeddings cache updated and saved.")
-            
-        print("DomiRec Engine initialization complete.")
+            print("[DomiRec] Embeddings cache updated.")
+
+        print("[DomiRec] Engine initialization complete (slow-path).")
 
     def search(self, query_text, domain=None, limit=10, exclude_ids=None, domain_filter=None):
         """

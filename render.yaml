@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: domirec-ai-backend
+    env: python
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: HF_HUB_OFFLINE
+        value: "1"
+      - key: SENTENCE_TRANSFORMERS_HOME
+        value: /opt/render/project/src/.cache/sentence_transformers
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    healthCheckPath: /health
+    autoDeploy: true
