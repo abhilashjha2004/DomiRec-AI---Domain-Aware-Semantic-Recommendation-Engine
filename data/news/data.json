@@ -1,0 +1,148 @@
+[
+  {
+    "id": "news_1",
+    "title": "Global Climate Accord: Summary of Key Policies",
+    "description": "Breakdown of the major international climate change treaty agreements. Carbon targets, energy transition funds, and enforcement dates.",
+    "tags": [
+      "climate change",
+      "global news",
+      "accord",
+      "treaty",
+      "environment",
+      "politics"
+    ],
+    "domain": "News",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 8,
+    "popularity": 88,
+    "freshness": 98,
+    "category": "News",
+    "keywords": [
+      "climate change",
+      "global news",
+      "accord",
+      "treaty",
+      "environment",
+      "politics"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "news_2",
+    "title": "The New AI Act Explained: How it Affects Tech Products",
+    "description": "A comprehensive review of the new global artificial intelligence regulations. Risk levels, copyright requirements, and fines detailed.",
+    "tags": [
+      "ai act",
+      "regulation",
+      "law",
+      "tech news",
+      "compliance",
+      "artificial intelligence"
+    ],
+    "domain": "News",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 12,
+    "popularity": 92,
+    "freshness": 97,
+    "category": "News",
+    "keywords": [
+      "ai act",
+      "regulation",
+      "law",
+      "tech news",
+      "compliance",
+      "artificial intelligence"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "news_3",
+    "title": "SpaceX Starship Flight 5: Successful booster catch",
+    "description": "Analysis of the historical engineering achievement of catch-landing the Super Heavy booster back on the Mechazilla launch tower arms.",
+    "tags": [
+      "spacex",
+      "starship",
+      "space exploration",
+      "engineering",
+      "news highlights"
+    ],
+    "domain": "News",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 10,
+    "popularity": 95,
+    "freshness": 95,
+    "category": "News",
+    "keywords": [
+      "spacex",
+      "starship",
+      "space exploration",
+      "engineering",
+      "news highlights"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "news_4",
+    "title": "Global Inflation Slowing Down: Economic Forecast",
+    "description": "Report on central bank interest rates, cooling price index indexes, and employment trends indicating stabilization in global markets.",
+    "tags": [
+      "economics",
+      "inflation",
+      "finance news",
+      "markets",
+      "interest rates"
+    ],
+    "domain": "News",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 9,
+    "popularity": 85,
+    "freshness": 96,
+    "category": "News",
+    "keywords": [
+      "economics",
+      "inflation",
+      "finance news",
+      "markets",
+      "interest rates"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "news_5",
+    "title": "Highlights from the 2026 G20 Geopolitical Summit",
+    "description": "Summary of discussions between world leaders regarding supply chain security, trade corridors, and regional conflicts.",
+    "tags": [
+      "g20",
+      "summit",
+      "geopolitics",
+      "world leaders",
+      "trade",
+      "global news"
+    ],
+    "domain": "News",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 86,
+    "freshness": 99,
+    "category": "News",
+    "keywords": [
+      "g20",
+      "summit",
+      "geopolitics",
+      "world leaders",
+      "trade",
+      "global news"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

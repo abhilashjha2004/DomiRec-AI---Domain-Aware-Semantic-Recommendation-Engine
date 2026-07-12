@@ -1,0 +1,150 @@
+[
+  {
+    "id": "ent_1",
+    "title": "Jimmy Fallon Interview with Robert Downey Jr.",
+    "description": "Robert Downey Jr. talks about his latest movie, tells hilarious stories from the set, and plays a round of True Confessions.",
+    "tags": [
+      "interview",
+      "jimmy fallon",
+      "tonight show",
+      "robert downey jr",
+      "comedy",
+      "hollywood"
+    ],
+    "domain": "Entertainment",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 11,
+    "popularity": 95,
+    "freshness": 93,
+    "category": "Entertainment",
+    "keywords": [
+      "interview",
+      "jimmy fallon",
+      "tonight show",
+      "robert downey jr",
+      "comedy",
+      "hollywood"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "ent_2",
+    "title": "Stand-up Comedy - Relatable Office Struggles",
+    "description": "Laugh out loud with this stand-up comedy set about corporate speak, unnecessary meetings, emails, and the agony of Slack notifications.",
+    "tags": [
+      "comedy",
+      "stand-up",
+      "office jokes",
+      "corporate",
+      "funny",
+      "humor"
+    ],
+    "domain": "Entertainment",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 8,
+    "popularity": 90,
+    "freshness": 89,
+    "category": "Entertainment",
+    "keywords": [
+      "comedy",
+      "stand-up",
+      "office jokes",
+      "corporate",
+      "funny",
+      "humor"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "ent_3",
+    "title": "Satisfying Kinetic Sand Experiments and ASMR",
+    "description": "Relax with the satisfying sounds and visuals of cutting, pressing, and crushing colorful kinetic sand. Pure ASMR triggers.",
+    "tags": [
+      "asmr",
+      "satisfying",
+      "kinetic sand",
+      "relaxing",
+      "visuals",
+      "no talking"
+    ],
+    "domain": "Entertainment",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 14,
+    "popularity": 88,
+    "freshness": 85,
+    "category": "Entertainment",
+    "keywords": [
+      "asmr",
+      "satisfying",
+      "kinetic sand",
+      "relaxing",
+      "visuals",
+      "no talking"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "ent_4",
+    "title": "Try Not To Laugh Challenge - Funniest Animal Fails",
+    "description": "Try your best not to giggle at these hilarious clips of clumsy cats, dogs chasing shadows, and cheeky birds causing chaos.",
+    "tags": [
+      "funny",
+      "animals",
+      "fails",
+      "try not to laugh",
+      "pets",
+      "humor"
+    ],
+    "domain": "Entertainment",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 93,
+    "freshness": 91,
+    "category": "Entertainment",
+    "keywords": [
+      "funny",
+      "animals",
+      "fails",
+      "try not to laugh",
+      "pets",
+      "humor"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "ent_5",
+    "title": "Reacting to Weird and Hilarious Internet Trends",
+    "description": "Reaction video reviewing the strangest viral trends, challenges, and memes currently taking over TikTok and Reddit.",
+    "tags": [
+      "reaction",
+      "internet culture",
+      "memes",
+      "viral trends",
+      "funny"
+    ],
+    "domain": "Entertainment",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 13,
+    "popularity": 86,
+    "freshness": 94,
+    "category": "Entertainment",
+    "keywords": [
+      "reaction",
+      "internet culture",
+      "memes",
+      "viral trends",
+      "funny"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

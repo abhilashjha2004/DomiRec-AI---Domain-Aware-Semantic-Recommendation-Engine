@@ -1,0 +1,373 @@
+[
+  {
+    "id": "edu_1",
+    "title": "Introduction to Programming and Python Basics",
+    "description": "Learn the basics of programming using Python. We cover variables, loops, conditionals, and basic functions in this beginner-friendly tutorial.",
+    "tags": [
+      "python",
+      "programming",
+      "coding",
+      "basics",
+      "variables",
+      "loops"
+    ],
+    "domain": "Education",
+    "difficulty": "Beginner",
+    "prerequisites": [],
+    "duration": 45,
+    "popularity": 92,
+    "freshness": 88,
+    "category": "Education",
+    "keywords": [
+      "python",
+      "programming",
+      "coding",
+      "basics",
+      "variables",
+      "loops"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_2",
+    "title": "Data Structures: Arrays and Linked Lists",
+    "description": "An essential guide to memory management, arrays, time complexity, and singly vs doubly linked lists. Implement them step-by-step.",
+    "tags": [
+      "data structures",
+      "dsa",
+      "arrays",
+      "linked lists",
+      "memory",
+      "coding"
+    ],
+    "domain": "Education",
+    "difficulty": "Beginner",
+    "prerequisites": [
+      "edu_1"
+    ],
+    "duration": 60,
+    "popularity": 95,
+    "freshness": 85,
+    "category": "Education",
+    "keywords": [
+      "data structures",
+      "dsa",
+      "arrays",
+      "linked lists",
+      "memory",
+      "coding"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_3",
+    "title": "Binary Search Basics and Iterative Implementation",
+    "description": "Master the binary search algorithm, its time complexity O(log N), and why it requires sorted arrays. Solve basic array search problems.",
+    "tags": [
+      "binary search",
+      "algorithms",
+      "dsa",
+      "search",
+      "divide and conquer"
+    ],
+    "domain": "Education",
+    "difficulty": "Intermediate",
+    "prerequisites": [
+      "edu_2"
+    ],
+    "duration": 30,
+    "popularity": 97,
+    "freshness": 90,
+    "category": "Education",
+    "keywords": [
+      "binary search",
+      "algorithms",
+      "dsa",
+      "search",
+      "divide and conquer"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_4",
+    "title": "Advanced Binary Search on Answer Space",
+    "description": "Learn to solve complex problems like Book Allocation, Aggressive Cows, and finding Peak Elements using Binary Search on Answer.",
+    "tags": [
+      "binary search",
+      "algorithms",
+      "dsa",
+      "advanced coding",
+      "competitive programming"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_3"
+    ],
+    "duration": 50,
+    "popularity": 91,
+    "freshness": 84,
+    "category": "Education",
+    "keywords": [
+      "binary search",
+      "algorithms",
+      "dsa",
+      "advanced coding",
+      "competitive programming"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_5",
+    "title": "Introduction to Trees and Binary Tree Traversals",
+    "description": "Understand hierarchical data structures. Explore Binary Trees and learn Inorder, Preorder, and Postorder traversal algorithms recursively.",
+    "tags": [
+      "trees",
+      "binary tree",
+      "dsa",
+      "traversal",
+      "recursion"
+    ],
+    "domain": "Education",
+    "difficulty": "Intermediate",
+    "prerequisites": [
+      "edu_2"
+    ],
+    "duration": 40,
+    "popularity": 89,
+    "freshness": 80,
+    "category": "Education",
+    "keywords": [
+      "trees",
+      "binary tree",
+      "dsa",
+      "traversal",
+      "recursion"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_6",
+    "title": "Binary Search Trees (BST) and Heap Operations",
+    "description": "Learn the properties of Binary Search Trees, insertion, deletion, and heap priority queues. Analyze time complexity of search operations.",
+    "tags": [
+      "bst",
+      "binary search tree",
+      "heaps",
+      "priority queue",
+      "dsa"
+    ],
+    "domain": "Education",
+    "difficulty": "Intermediate",
+    "prerequisites": [
+      "edu_5"
+    ],
+    "duration": 45,
+    "popularity": 90,
+    "freshness": 82,
+    "category": "Education",
+    "keywords": [
+      "bst",
+      "binary search tree",
+      "heaps",
+      "priority queue",
+      "dsa"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_7",
+    "title": "Graph Theory: Representations, BFS, and DFS",
+    "description": "Understand graphs, adjacency lists vs matrices, and how to traverse them using Breadth First Search (BFS) and Depth First Search (DFS).",
+    "tags": [
+      "graphs",
+      "bfs",
+      "dfs",
+      "algorithms",
+      "dsa",
+      "traversal"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_5"
+    ],
+    "duration": 55,
+    "popularity": 93,
+    "freshness": 86,
+    "category": "Education",
+    "keywords": [
+      "graphs",
+      "bfs",
+      "dfs",
+      "algorithms",
+      "dsa",
+      "traversal"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_8",
+    "title": "Dynamic Programming (DP): Memoization and Tabulation",
+    "description": "Demystify Dynamic Programming. Learn how to identify DP problems, write overlapping subproblem solutions, and optimize from recursive to iterative.",
+    "tags": [
+      "dynamic programming",
+      "dp",
+      "algorithms",
+      "dsa",
+      "optimization",
+      "memoization"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_2"
+    ],
+    "duration": 65,
+    "popularity": 96,
+    "freshness": 89,
+    "category": "Education",
+    "keywords": [
+      "dynamic programming",
+      "dp",
+      "algorithms",
+      "dsa",
+      "optimization",
+      "memoization"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_9",
+    "title": "Advanced Dynamic Programming on Trees and Graphs",
+    "description": "Master complex DP concepts, including Tree DP, rerouting techniques, and state space optimization on graph traversals.",
+    "tags": [
+      "dynamic programming",
+      "tree dp",
+      "graphs",
+      "advanced algorithms",
+      "dsa"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_8",
+      "edu_6"
+    ],
+    "duration": 70,
+    "popularity": 88,
+    "freshness": 79,
+    "category": "Education",
+    "keywords": [
+      "dynamic programming",
+      "tree dp",
+      "graphs",
+      "advanced algorithms",
+      "dsa"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_10",
+    "title": "Machine Learning Foundations and Linear Regression",
+    "description": "Introduction to supervised learning. Learn the mathematical formulation of Linear Regression, cost function, and gradient descent.",
+    "tags": [
+      "machine learning",
+      "ml",
+      "math",
+      "statistics",
+      "linear regression",
+      "python"
+    ],
+    "domain": "Education",
+    "difficulty": "Intermediate",
+    "prerequisites": [
+      "edu_1"
+    ],
+    "duration": 50,
+    "popularity": 94,
+    "freshness": 91,
+    "category": "Education",
+    "keywords": [
+      "machine learning",
+      "ml",
+      "math",
+      "statistics",
+      "linear regression",
+      "python"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_11",
+    "title": "Neural Networks and Backpropagation Explained",
+    "description": "Build an intuition for deep learning. Learn how artificial neural networks work, activation functions, and the backpropagation math.",
+    "tags": [
+      "deep learning",
+      "neural networks",
+      "backpropagation",
+      "ai",
+      "machine learning"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_10"
+    ],
+    "duration": 60,
+    "popularity": 93,
+    "freshness": 88,
+    "category": "Education",
+    "keywords": [
+      "deep learning",
+      "neural networks",
+      "backpropagation",
+      "ai",
+      "machine learning"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "edu_12",
+    "title": "Transformers Architecture and Large Language Models",
+    "description": "Dive deep into the Transformer model, self-attention mechanisms, encoder-decoder blocks, and how modern LLMs are trained.",
+    "tags": [
+      "transformers",
+      "attention",
+      "llms",
+      "gpt",
+      "deep learning",
+      "ai"
+    ],
+    "domain": "Education",
+    "difficulty": "Advanced",
+    "prerequisites": [
+      "edu_11"
+    ],
+    "duration": 75,
+    "popularity": 98,
+    "freshness": 95,
+    "category": "Education",
+    "keywords": [
+      "transformers",
+      "attention",
+      "llms",
+      "gpt",
+      "deep learning",
+      "ai"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

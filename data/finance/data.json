@@ -1,0 +1,150 @@
+[
+  {
+    "id": "fin_1",
+    "title": "How to Start Investing in Stocks: A Beginner Guide",
+    "description": "Learn the basics of stock markets. Index funds, mutual funds, individual stocks, brokerage accounts, and diversification explained.",
+    "tags": [
+      "investing",
+      "stocks",
+      "finance basics",
+      "index funds",
+      "brokerage",
+      "personal finance"
+    ],
+    "domain": "Finance",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 20,
+    "popularity": 94,
+    "freshness": 91,
+    "category": "Finance",
+    "keywords": [
+      "investing",
+      "stocks",
+      "finance basics",
+      "index funds",
+      "brokerage",
+      "personal finance"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "fin_2",
+    "title": "Understanding Cryptocurrencies and Blockchain Ledger",
+    "description": "What is cryptocurrency? Learn about blockchain nodes, mining mechanisms, smart contracts, and proof-of-work vs proof-of-stake.",
+    "tags": [
+      "cryptocurrency",
+      "blockchain",
+      "bitcoin",
+      "ethereum",
+      "fintech",
+      "finance basics"
+    ],
+    "domain": "Finance",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 16,
+    "popularity": 89,
+    "freshness": 88,
+    "category": "Finance",
+    "keywords": [
+      "cryptocurrency",
+      "blockchain",
+      "bitcoin",
+      "ethereum",
+      "fintech",
+      "finance basics"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "fin_3",
+    "title": "The 50/30/20 Budgeting Rule for Financial Health",
+    "description": "A simple budgeting method to split your income into needs, wants, and savings. Achieve financial independence faster with this structure.",
+    "tags": [
+      "budgeting",
+      "personal finance",
+      "savings",
+      "financial independence",
+      "frugal",
+      "wealth management"
+    ],
+    "domain": "Finance",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 11,
+    "popularity": 93,
+    "freshness": 89,
+    "category": "Finance",
+    "keywords": [
+      "budgeting",
+      "personal finance",
+      "savings",
+      "financial independence",
+      "frugal",
+      "wealth management"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "fin_4",
+    "title": "Compound Interest: How to Grow Wealth Exponentially",
+    "description": "See the math behind compounding. Why investing early makes a massive difference over time. Real calculations and examples.",
+    "tags": [
+      "compound interest",
+      "wealth building",
+      "investing",
+      "retirement",
+      "math",
+      "savings"
+    ],
+    "domain": "Finance",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 14,
+    "popularity": 95,
+    "freshness": 85,
+    "category": "Finance",
+    "keywords": [
+      "compound interest",
+      "wealth building",
+      "investing",
+      "retirement",
+      "math",
+      "savings"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "fin_5",
+    "title": "Real Estate Investment Strategies for Passive Income",
+    "description": "Compare residential rentals, commercial property investing, and REITs. How to manage properties and compute rental yield rates.",
+    "tags": [
+      "real estate",
+      "reits",
+      "passive income",
+      "rental property",
+      "investing"
+    ],
+    "domain": "Finance",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 25,
+    "popularity": 91,
+    "freshness": 83,
+    "category": "Finance",
+    "keywords": [
+      "real estate",
+      "reits",
+      "passive income",
+      "rental property",
+      "investing"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

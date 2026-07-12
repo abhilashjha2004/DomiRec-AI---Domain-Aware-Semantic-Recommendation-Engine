@@ -1,0 +1,184 @@
+[
+  {
+    "id": "blog_1",
+    "title": "Shimla Travel Vlog - Winter Snowfall Guide",
+    "description": "Experience the magical snowfall in Shimla! We walk through Mall Road, visit Jakhoo Temple, and share tips for a winter vacation.",
+    "tags": [
+      "travel",
+      "vlog",
+      "shimla",
+      "snowfall",
+      "tourism",
+      "india"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 18,
+    "popularity": 87,
+    "freshness": 94,
+    "category": "Blogging",
+    "keywords": [
+      "travel",
+      "vlog",
+      "shimla",
+      "snowfall",
+      "tourism",
+      "india"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "blog_2",
+    "title": "Solo Travel in Japan: Tokyo & Kyoto Explorer Guide",
+    "description": "A comprehensive guide for solo travelers visiting Japan. Navigating bullet trains, tasting street food, and experiencing shrines.",
+    "tags": [
+      "travel",
+      "japan",
+      "tokyo",
+      "kyoto",
+      "solo travel",
+      "vlog",
+      "guide"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 25,
+    "popularity": 92,
+    "freshness": 91,
+    "category": "Blogging",
+    "keywords": [
+      "travel",
+      "japan",
+      "tokyo",
+      "kyoto",
+      "solo travel",
+      "vlog",
+      "guide"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "blog_3",
+    "title": "Day in the Life of a Remote Software Engineer",
+    "description": "Go behind the scenes of my day as a remote full-stack developer. Coding, stand-up meetings, work-life balance, and coffee setups.",
+    "tags": [
+      "lifestyle",
+      "vlog",
+      "software engineer",
+      "remote work",
+      "coding",
+      "productivity"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 12,
+    "popularity": 89,
+    "freshness": 88,
+    "category": "Blogging",
+    "keywords": [
+      "lifestyle",
+      "vlog",
+      "software engineer",
+      "remote work",
+      "coding",
+      "productivity"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "blog_4",
+    "title": "Bali Budget Travel Guide: Hidden Gems & Costs",
+    "description": "How to travel in Bali for under $30 a day. Cheap villas, scooter rentals, local warungs, and stunning beaches.",
+    "tags": [
+      "travel",
+      "bali",
+      "budget travel",
+      "vlog",
+      "indonesia",
+      "backpacking"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 85,
+    "freshness": 86,
+    "category": "Blogging",
+    "keywords": [
+      "travel",
+      "bali",
+      "budget travel",
+      "vlog",
+      "indonesia",
+      "backpacking"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "blog_5",
+    "title": "Building a Tiny Off-Grid House in the Woods",
+    "description": "Follow my process of designing and building a sustainable tiny house in the mountains from scratch, powered by solar energy.",
+    "tags": [
+      "diy",
+      "tiny house",
+      "off-grid",
+      "woodworking",
+      "vlog",
+      "sustainability"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 30,
+    "popularity": 94,
+    "freshness": 92,
+    "category": "Blogging",
+    "keywords": [
+      "diy",
+      "tiny house",
+      "off-grid",
+      "woodworking",
+      "vlog",
+      "sustainability"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "blog_6",
+    "title": "My Minimalist Productive Morning Routine (5 AM)",
+    "description": "How waking up early, journaling, exercising, and avoiding my phone changed my productivity and mental clarity. Simple habits that work.",
+    "tags": [
+      "lifestyle",
+      "productivity",
+      "morning routine",
+      "minimalism",
+      "habits",
+      "vlog"
+    ],
+    "domain": "Blogging",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 10,
+    "popularity": 91,
+    "freshness": 87,
+    "category": "Blogging",
+    "keywords": [
+      "lifestyle",
+      "productivity",
+      "morning routine",
+      "minimalism",
+      "habits",
+      "vlog"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

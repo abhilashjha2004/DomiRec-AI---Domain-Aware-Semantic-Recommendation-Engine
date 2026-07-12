@@ -1,0 +1,182 @@
+[
+  {
+    "id": "tech_1",
+    "title": "iPhone 18 Pro Review - A New Era of AI Integration",
+    "description": "An in-depth review of the iPhone 18 Pro. We test the new camera sensor, battery life, titanium finish, and localized AI features.",
+    "tags": [
+      "iphone",
+      "apple",
+      "smartphone",
+      "tech review",
+      "gadgets",
+      "camera"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 18,
+    "popularity": 95,
+    "freshness": 98,
+    "category": "Technology",
+    "keywords": [
+      "iphone",
+      "apple",
+      "smartphone",
+      "tech review",
+      "gadgets",
+      "camera"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "tech_2",
+    "title": "M4 MacBook Pro vs Premium Windows Laptops",
+    "description": "Detailed comparison of battery efficiency, compiling speed, rendering capabilities, and price-to-performance ratio between MacOS and Windows.",
+    "tags": [
+      "macbook",
+      "windows laptop",
+      "comparison",
+      "tech review",
+      "performance",
+      "programming laptop"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 22,
+    "popularity": 91,
+    "freshness": 94,
+    "category": "Technology",
+    "keywords": [
+      "macbook",
+      "windows laptop",
+      "comparison",
+      "tech review",
+      "performance",
+      "programming laptop"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "tech_3",
+    "title": "How Quantum Computing Works - Simple Visual Guide",
+    "description": "Understand qubits, superposition, entanglement, and quantum gates without a PhD. Renders complex physics into simple graphics.",
+    "tags": [
+      "quantum computing",
+      "physics",
+      "futuristic tech",
+      "explanation",
+      "science",
+      "qubits"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 94,
+    "freshness": 92,
+    "category": "Technology",
+    "keywords": [
+      "quantum computing",
+      "physics",
+      "futuristic tech",
+      "explanation",
+      "science",
+      "qubits"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "tech_4",
+    "title": "Web Development Trends to Watch in 2026",
+    "description": "Explore where frontend and backend engineering are heading. We analyze Edge functions, AI-assisted coding, CSS progress, and WASM.",
+    "tags": [
+      "web development",
+      "trends",
+      "frontend",
+      "backend",
+      "programming",
+      "javascript"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 14,
+    "popularity": 88,
+    "freshness": 97,
+    "category": "Technology",
+    "keywords": [
+      "web development",
+      "trends",
+      "frontend",
+      "backend",
+      "programming",
+      "javascript"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "tech_5",
+    "title": "Next.js 15 vs SvelteKit - The Ultimate 2026 Verdict",
+    "description": "Which framework should you choose for your next SaaS startup? We compare server-side rendering speed, routing, and developer experience.",
+    "tags": [
+      "nextjs",
+      "sveltekit",
+      "react",
+      "svelte",
+      "framework",
+      "comparison"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 16,
+    "popularity": 89,
+    "freshness": 95,
+    "category": "Technology",
+    "keywords": [
+      "nextjs",
+      "sveltekit",
+      "react",
+      "svelte",
+      "framework",
+      "comparison"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "tech_6",
+    "title": "Docker and Kubernetes: Containerization from Scratch",
+    "description": "Learn containerization principles. Build Dockerfiles, manage volumes, run compose scripts, and scale pods inside a Kubernetes cluster.",
+    "tags": [
+      "docker",
+      "kubernetes",
+      "devops",
+      "containers",
+      "backend",
+      "cloud"
+    ],
+    "domain": "Technology",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 45,
+    "popularity": 92,
+    "freshness": 86,
+    "category": "Technology",
+    "keywords": [
+      "docker",
+      "kubernetes",
+      "devops",
+      "containers",
+      "backend",
+      "cloud"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

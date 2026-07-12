@@ -1,0 +1,292 @@
+[
+  {
+    "id": "mov_1",
+    "title": "Interstellar - Space Exploration Masterpiece",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. Directed by Christopher Nolan.",
+    "tags": [
+      "sci-fi",
+      "space",
+      "christopher nolan",
+      "time travel",
+      "drama",
+      "physics"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 169,
+    "popularity": 97,
+    "freshness": 75,
+    "category": "Movies",
+    "keywords": [
+      "sci-fi",
+      "space",
+      "christopher nolan",
+      "time travel",
+      "drama",
+      "physics"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_2",
+    "title": "Inception - Mind-Bending Dream Heist",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "tags": [
+      "sci-fi",
+      "action",
+      "heist",
+      "christopher nolan",
+      "mind-bending",
+      "dreams"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 148,
+    "popularity": 96,
+    "freshness": 70,
+    "category": "Movies",
+    "keywords": [
+      "sci-fi",
+      "action",
+      "heist",
+      "christopher nolan",
+      "mind-bending",
+      "dreams"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_3",
+    "title": "The Martian - Survival on the Red Planet",
+    "description": "An astronaut becomes stranded on Mars after his crew assumes him dead, and must rely on his ingenuity to find a way to signal to Earth.",
+    "tags": [
+      "sci-fi",
+      "survival",
+      "mars",
+      "space",
+      "matt damon",
+      "adventure"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 141,
+    "popularity": 92,
+    "freshness": 78,
+    "category": "Movies",
+    "keywords": [
+      "sci-fi",
+      "survival",
+      "mars",
+      "space",
+      "matt damon",
+      "adventure"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_4",
+    "title": "Gravity - Lost in Orbit Thriller",
+    "description": "Two astronauts work together to survive after an accident leaves them stranded in space with no connection to Earth. Starring Sandra Bullock.",
+    "tags": [
+      "sci-fi",
+      "thriller",
+      "space",
+      "survival",
+      "cinematography"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 91,
+    "popularity": 89,
+    "freshness": 72,
+    "category": "Movies",
+    "keywords": [
+      "sci-fi",
+      "thriller",
+      "space",
+      "survival",
+      "cinematography"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_5",
+    "title": "Arrival - First Contact and Linguistics",
+    "description": "A linguist works with the military to communicate with alien lifelike spacecraft that have landed across the globe, uncovering a deeper secret of time.",
+    "tags": [
+      "sci-fi",
+      "aliens",
+      "linguistics",
+      "denis villeneuve",
+      "mystery",
+      "mind-bending"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 116,
+    "popularity": 91,
+    "freshness": 81,
+    "category": "Movies",
+    "keywords": [
+      "sci-fi",
+      "aliens",
+      "linguistics",
+      "denis villeneuve",
+      "mystery",
+      "mind-bending"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_6",
+    "title": "Tenet - Temporal Inversion Action",
+    "description": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage.",
+    "tags": [
+      "action",
+      "sci-fi",
+      "time travel",
+      "christopher nolan",
+      "espionage"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 150,
+    "popularity": 85,
+    "freshness": 84,
+    "category": "Movies",
+    "keywords": [
+      "action",
+      "sci-fi",
+      "time travel",
+      "christopher nolan",
+      "espionage"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_7",
+    "title": "The Dark Knight - Iconic Superhero Drama",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
+    "tags": [
+      "action",
+      "batman",
+      "joker",
+      "christopher nolan",
+      "crime",
+      "thriller"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 152,
+    "popularity": 99,
+    "freshness": 65,
+    "category": "Movies",
+    "keywords": [
+      "action",
+      "batman",
+      "joker",
+      "christopher nolan",
+      "crime",
+      "thriller"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_8",
+    "title": "Memento - Backward Narrative Crime Mystery",
+    "description": "A man with short-term memory loss attempts to track down his wife's murderer, utilizing polaroids and tattoos to reconstruct his life.",
+    "tags": [
+      "mystery",
+      "thriller",
+      "memory",
+      "christopher nolan",
+      "mind-bending"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 113,
+    "popularity": 90,
+    "freshness": 60,
+    "category": "Movies",
+    "keywords": [
+      "mystery",
+      "thriller",
+      "memory",
+      "christopher nolan",
+      "mind-bending"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_9",
+    "title": "Shutter Island - Psychological Isolation Mystery",
+    "description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane on Shutter Island.",
+    "tags": [
+      "psychological",
+      "thriller",
+      "mystery",
+      "martin scorsese",
+      "leonardo dicaprio"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 138,
+    "popularity": 94,
+    "freshness": 73,
+    "category": "Movies",
+    "keywords": [
+      "psychological",
+      "thriller",
+      "mystery",
+      "martin scorsese",
+      "leonardo dicaprio"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mov_10",
+    "title": "The Prestige - Rivalry of Illusionists",
+    "description": "After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything.",
+    "tags": [
+      "mystery",
+      "drama",
+      "magic",
+      "christopher nolan",
+      "rivalry"
+    ],
+    "domain": "Movies",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 130,
+    "popularity": 93,
+    "freshness": 68,
+    "category": "Movies",
+    "keywords": [
+      "mystery",
+      "drama",
+      "magic",
+      "christopher nolan",
+      "rivalry"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

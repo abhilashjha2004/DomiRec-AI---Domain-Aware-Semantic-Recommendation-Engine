@@ -1,0 +1,150 @@
+[
+  {
+    "id": "health_1",
+    "title": "Intermittent Fasting: The Science and Benefits",
+    "description": "Understand autophagy, insulin levels, fat burning, and common intermittent fasting schedules (16/8, 20/4) backed by medical research.",
+    "tags": [
+      "intermittent fasting",
+      "diet",
+      "nutrition",
+      "science",
+      "weight loss",
+      "health"
+    ],
+    "domain": "Health",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 93,
+    "freshness": 92,
+    "category": "Health",
+    "keywords": [
+      "intermittent fasting",
+      "diet",
+      "nutrition",
+      "science",
+      "weight loss",
+      "health"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "health_2",
+    "title": "15-Minute Daily Full Body Flexibility Stretch",
+    "description": "Follow along with this beginner-friendly morning mobility routine. Improve your posture, release back pain, and increase range of motion.",
+    "tags": [
+      "flexibility",
+      "stretching",
+      "mobility",
+      "posture",
+      "workout",
+      "fitness"
+    ],
+    "domain": "Health",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 15,
+    "popularity": 96,
+    "freshness": 89,
+    "category": "Health",
+    "keywords": [
+      "flexibility",
+      "stretching",
+      "mobility",
+      "posture",
+      "workout",
+      "fitness"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "health_3",
+    "title": "Introduction to Mindfulness Meditation for Stress",
+    "description": "A guided breath-work meditation to soothe anxiety, reduce stress hormones, and improve mental focus. Sit back, close your eyes, and listen.",
+    "tags": [
+      "meditation",
+      "mindfulness",
+      "stress relief",
+      "mental health",
+      "breathing exercises",
+      "wellness"
+    ],
+    "domain": "Health",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 10,
+    "popularity": 91,
+    "freshness": 88,
+    "category": "Health",
+    "keywords": [
+      "meditation",
+      "mindfulness",
+      "stress relief",
+      "mental health",
+      "breathing exercises",
+      "wellness"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "health_4",
+    "title": "Top 10 Superfoods You Should Eat Daily",
+    "description": "Reviewing the highest nutrient-dense foods on Earth, including berries, leafy greens, nuts, and fish, and how they help your longevity.",
+    "tags": [
+      "superfoods",
+      "nutrition",
+      "diet",
+      "longevity",
+      "vitamins",
+      "healthy eating"
+    ],
+    "domain": "Health",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 12,
+    "popularity": 90,
+    "freshness": 86,
+    "category": "Health",
+    "keywords": [
+      "superfoods",
+      "nutrition",
+      "diet",
+      "longevity",
+      "vitamins",
+      "healthy eating"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "health_5",
+    "title": "The Science of Sleep: Optimizing Your REM Cycles",
+    "description": "Learn about circadian rhythms, melatonin levels, blue light exposure, and habits that will maximize deep sleep and REM recovery cycles.",
+    "tags": [
+      "sleep quality",
+      "rem cycle",
+      "circadian rhythm",
+      "health tips",
+      "science of sleep"
+    ],
+    "domain": "Health",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 18,
+    "popularity": 94,
+    "freshness": 90,
+    "category": "Health",
+    "keywords": [
+      "sleep quality",
+      "rem cycle",
+      "circadian rhythm",
+      "health tips",
+      "science of sleep"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]

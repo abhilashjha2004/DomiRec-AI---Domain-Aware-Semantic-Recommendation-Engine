@@ -1,0 +1,151 @@
+[
+  {
+    "id": "book_1",
+    "title": "To Kill a Mockingbird",
+    "description": "Harper Lee's Pulitzer Prize-winning classic novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "classic",
+      "fiction",
+      "justice",
+      "drama"
+    ],
+    "keywords": [
+      "mockingbird",
+      "harper lee",
+      "racism",
+      "scout",
+      "atticus finch"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
+    "duration": 0,
+    "popularity": 95,
+    "freshness": 70
+  },
+  {
+    "id": "book_2",
+    "title": "1984",
+    "description": "George Orwell's dystopian masterpiece about a totalitarian regime, omnipresent government surveillance (Big Brother), and the absolute control of truth.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "dystopian",
+      "sci-fi",
+      "political fiction",
+      "classic"
+    ],
+    "keywords": [
+      "1984",
+      "orwell",
+      "big brother",
+      "surveillance",
+      "winston smith"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four",
+    "duration": 0,
+    "popularity": 96,
+    "freshness": 75
+  },
+  {
+    "id": "book_3",
+    "title": "The Great Gatsby",
+    "description": "F. Scott Fitzgerald's famous novel exploring themes of wealth, love, decadence, and the disillusionment of the American Dream in the Roaring Twenties.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "classic",
+      "romance",
+      "tragedy",
+      "american dream"
+    ],
+    "keywords": [
+      "gatsby",
+      "fitzgerald",
+      "nick carraway",
+      "daisy buchanan",
+      "roaring twenties"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/The_Great_Gatsby",
+    "duration": 0,
+    "popularity": 92,
+    "freshness": 60
+  },
+  {
+    "id": "book_4",
+    "title": "The Hobbit",
+    "description": "J.R.R. Tolkien's beloved fantasy adventure novel following Bilbo Baggins as he journeys to reclaim the Lonely Mountain and its treasure from the dragon Smaug.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "fantasy",
+      "adventure",
+      "classic",
+      "epic"
+    ],
+    "keywords": [
+      "hobbit",
+      "tolkien",
+      "bilbo baggins",
+      "gandalf",
+      "smaug",
+      "middle-earth"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/The_Hobbit",
+    "duration": 0,
+    "popularity": 97,
+    "freshness": 65
+  },
+  {
+    "id": "book_5",
+    "title": "Fahrenheit 451",
+    "description": "Ray Bradbury's classic dystopian novel depicting a future society where books are outlawed and firemen burn any that are found.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "dystopian",
+      "sci-fi",
+      "classic",
+      "censorship"
+    ],
+    "keywords": [
+      "fahrenheit 451",
+      "bradbury",
+      "guy montag",
+      "books burning"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/Fahrenheit_451",
+    "duration": 0,
+    "popularity": 90,
+    "freshness": 70
+  },
+  {
+    "id": "book_6",
+    "title": "Pride and Prejudice",
+    "description": "Jane Austen's timeless romantic novel dealing with the themes of love, class structure, reputations, and misunderstandings in Georgian England.",
+    "category": "Books",
+    "domain": "Books",
+    "tags": [
+      "classic",
+      "romance",
+      "drama",
+      "historical"
+    ],
+    "keywords": [
+      "pride and prejudice",
+      "austen",
+      "elizabeth bennet",
+      "mr darcy"
+    ],
+    "thumbnail": "",
+    "source_url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+    "duration": 0,
+    "popularity": 94,
+    "freshness": 55
+  }
+]

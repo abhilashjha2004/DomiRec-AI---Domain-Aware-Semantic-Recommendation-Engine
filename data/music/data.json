@@ -1,0 +1,152 @@
+[
+  {
+    "id": "mus_1",
+    "title": "Lofi Hip Hop Radio - Chill Beats to Study/Relax",
+    "description": "Rhythm-focused chill lofi beats. Perfect background music for coding, studying, reading, or falling asleep. Streamed 24/7.",
+    "tags": [
+      "lofi",
+      "beats",
+      "chill",
+      "study music",
+      "coding background",
+      "ambient"
+    ],
+    "domain": "Music",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 120,
+    "popularity": 98,
+    "freshness": 99,
+    "category": "Music",
+    "keywords": [
+      "lofi",
+      "beats",
+      "chill",
+      "study music",
+      "coding background",
+      "ambient"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mus_2",
+    "title": "Chopin - Best Nocturnes (Classical Piano Playlist)",
+    "description": "Enjoy a curated selection of Fr\u00e9d\u00e9ric Chopin's most beautiful and emotional nocturnes, played by world-class concert pianists.",
+    "tags": [
+      "classical music",
+      "piano",
+      "chopin",
+      "nocturne",
+      "relaxing",
+      "instrumental"
+    ],
+    "domain": "Music",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 60,
+    "popularity": 92,
+    "freshness": 40,
+    "category": "Music",
+    "keywords": [
+      "classical music",
+      "piano",
+      "chopin",
+      "nocturne",
+      "relaxing",
+      "instrumental"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mus_3",
+    "title": "Acoustic Guitar Hits - Relaxing Chill Instrumental",
+    "description": "Soothing acoustic guitar covers of popular pop and folk songs. Great for background relaxation, cafes, and studying.",
+    "tags": [
+      "acoustic",
+      "guitar",
+      "instrumental",
+      "chill music",
+      "covers",
+      "folk"
+    ],
+    "domain": "Music",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 45,
+    "popularity": 89,
+    "freshness": 82,
+    "category": "Music",
+    "keywords": [
+      "acoustic",
+      "guitar",
+      "instrumental",
+      "chill music",
+      "covers",
+      "folk"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mus_4",
+    "title": "Coldplay - Fix You (Official Live Video)",
+    "description": "Experience the emotional stadium performance of Coldplay performing their classic anthem 'Fix You' live in London.",
+    "tags": [
+      "pop",
+      "rock",
+      "coldplay",
+      "live performance",
+      "concert",
+      "fix you"
+    ],
+    "domain": "Music",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 5,
+    "popularity": 96,
+    "freshness": 70,
+    "category": "Music",
+    "keywords": [
+      "pop",
+      "rock",
+      "coldplay",
+      "live performance",
+      "concert",
+      "fix you"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  },
+  {
+    "id": "mus_5",
+    "title": "Synthwave Retrowave Beats for Coding & Focus",
+    "description": "Energetic, retro-futuristic synthwave tracks inspired by 80s sci-fi movies. Dynamic tempo designed for deep coding focus.",
+    "tags": [
+      "synthwave",
+      "retrowave",
+      "electronic",
+      "coding music",
+      "focus",
+      "beats"
+    ],
+    "domain": "Music",
+    "difficulty": null,
+    "prerequisites": [],
+    "duration": 90,
+    "popularity": 93,
+    "freshness": 88,
+    "category": "Music",
+    "keywords": [
+      "synthwave",
+      "retrowave",
+      "electronic",
+      "coding music",
+      "focus",
+      "beats"
+    ],
+    "thumbnail": "",
+    "source_url": ""
+  }
+]
