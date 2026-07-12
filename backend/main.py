@@ -2,6 +2,7 @@ import os
 import sys
 import asyncio
 import traceback
+from contextlib import asynccontextmanager
 from typing import Optional
 from pydantic import BaseModel
 from fastapi import FastAPI, HTTPException, Query
@@ -15,38 +16,29 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from ml.engine import DomiRecEngine
 
-# ── Engine (lightweight constructor — no heavy work here) ─────────────────────
-engine = DomiRecEngine()
 
-# ── FastAPI app ───────────────────────────────────────────────────────────────
-app = FastAPI(title="DomiRec AI API", version="1.0.0")
-
-# ── CORS ──────────────────────────────────────────────────────────────────────
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# ── Startup ───────────────────────────────────────────────────────────────────
-# CRITICAL FIX: The heavy initialization (model load + FAISS index load) is
-# run inside asyncio.to_thread() so it executes in a background thread pool
-# worker.  This allows uvicorn to bind the TCP socket and respond to Render's
-# port-scan immediately, while the engine loads concurrently.
-@app.on_event("startup")
-async def startup_event():
+# ── Lifespan ──────────────────────────────────────────────────────────────────
+# Uses the modern FastAPI lifespan context manager (replaces deprecated
+# @app.on_event("startup")).  The heavy ML initialization runs inside
+# asyncio.to_thread() so uvicorn binds the TCP port immediately — critical for
+# Render's port-scan timeout.
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     print("[DomiRec] FastAPI server starting — binding port now.")
     try:
         await asyncio.to_thread(engine.build_or_load_indices)
         print("[DomiRec] ML Engine loaded successfully. Ready to serve requests.")
     except Exception:
-        # Print full traceback so Render logs show the exact failure.
         print("[DomiRec] CRITICAL: ML Engine failed to load. Traceback below:")
         print(traceback.format_exc())
-        # Server stays up so health-check endpoints still respond, but API calls
-        # will return empty results (graceful degradation, not a silent hang).
+    yield  # server is running
+    # (shutdown cleanup can go here if needed)
+
+# ── Engine (lightweight constructor — no heavy work here) ─────────────────────
+engine = DomiRecEngine()
+
+# ── FastAPI app ───────────────────────────────────────────────────────────────
+app = FastAPI(title="DomiRec AI API", version="1.0.0", lifespan=lifespan)
 
 # ── Pydantic schemas ──────────────────────────────────────────────────────────
 class SearchRequest(BaseModel):

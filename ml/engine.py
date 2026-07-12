@@ -60,9 +60,15 @@ class DomiRecEngine:
         if self.model is None:
             if SentenceTransformer is None:
                 raise ImportError("sentence-transformers is not available. Please install it first.")
-            print("Loading sentence-transformer model 'all-MiniLM-L6-v2'...")
-            self.model = SentenceTransformer("all-MiniLM-L6-v2")
-            print("Model loaded successfully.")
+            model_name = "sentence-transformers/all-MiniLM-L6-v2"
+            cache_dir = os.environ.get("SENTENCE_TRANSFORMERS_HOME")
+            print(f"[DomiRec] Loading SentenceTransformer model '{model_name}'...")
+            if cache_dir:
+                print(f"[DomiRec] Using model cache: {cache_dir}")
+                self.model = SentenceTransformer(model_name, cache_folder=cache_dir)
+            else:
+                self.model = SentenceTransformer(model_name)
+            print("[DomiRec] SentenceTransformer model loaded.")
 
     def get_embedding(self, text):
         if self.model is None:
