@@ -346,18 +346,23 @@ export default function Home() {
     music: []
   });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  const fetchHomeData = async () => {
+    setLoading(true);
+    setError(false);
+    try {
+      const res = await axios.get("http://localhost:8000/api/home");
+      setHomeData(res.data);
+    } catch (err) {
+      console.error("CRITICAL ERROR: Failed to load dataset payload from home API:", err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchHomeData = async () => {
-      try {
-        const res = await axios.get("http://localhost:8000/api/home");
-        setHomeData(res.data);
-      } catch (err) {
-        console.error("CRITICAL ERROR: Failed to load dataset payload from home API:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchHomeData();
   }, []);
 
@@ -368,13 +373,35 @@ export default function Home() {
 
   const hasData = Object.values(homeData).some(arr => arr && arr.length > 0);
 
-  if (loading || !hasData) {
+  if (loading) {
     return (
       <div className="py-44 text-center space-y-4">
         <div className="w-12 h-12 rounded-2xl bg-accent-emerald/10 border border-accent-emerald/30 flex items-center justify-center text-accent-emerald mx-auto animate-spin shadow-neon-green/5">
           <Brain className="w-6 h-6 animate-pulse" />
         </div>
         <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Loading Content Discovery Catalogs...</p>
+      </div>
+    );
+  }
+
+  if (error || !hasData) {
+    return (
+      <div className="py-44 text-center space-y-6">
+        <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 mx-auto">
+          <Brain className="w-8 h-8" />
+        </div>
+        <div className="space-y-2">
+          <p className="text-base font-black text-slate-200 uppercase tracking-wider">Backend Offline</p>
+          <p className="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">
+            Cannot connect to the DomiRec AI engine at <span className="text-slate-400 font-mono">localhost:8000</span>. Make sure the FastAPI server is running.
+          </p>
+        </div>
+        <button
+          onClick={fetchHomeData}
+          className="px-6 py-2.5 rounded-xl bg-accent-emerald/10 border border-accent-emerald/30 hover:bg-accent-emerald/20 text-accent-emerald text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-105 active:scale-95"
+        >
+          Retry Connection
+        </button>
       </div>
     );
   }
