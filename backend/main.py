@@ -280,14 +280,20 @@ async def refresh_indices():
 # ── Production entrypoint ─────────────────────────────────────────────────────
 # Render sets $PORT dynamically. We must bind to 0.0.0.0 (not 127.0.0.1) so
 # Render's external port-scanner can reach the socket.
+#
+# IMPORTANT: render.yaml calls this file directly as:
+#   python backend/main.py
+# so CWD is the project root. We therefore use "backend.main:app" only when
+# this module is __main__, and pass the backend dir so Python finds "main".
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
-    print(f"[DomiRec] Starting uvicorn on 0.0.0.0:{port}")
+    print(f"[DomiRec] Binding port {port} on 0.0.0.0 — Render port scan will succeed.")
+    # Run the app object directly (not as a string import) so CWD doesn't matter.
     uvicorn.run(
-        "main:app",
+        app,
         host="0.0.0.0",
         port=port,
         reload=False,
-        app_dir=str(Path(__file__).parent)
+        log_level="info",
     )

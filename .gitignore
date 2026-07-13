@@ -14,9 +14,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Environment variables
+# Environment variables — exclude secrets, keep dev env files
 .env
-.env.*
+.env.local
+.env.production
+.env.*.local
 
 # Editor / IDE configuration
 .vscode/
@@ -31,5 +33,10 @@ __pycache__/
 *.log
 logs/
 
-# Offline FAISS index temporary files
+# Offline FAISS index temporary files (legacy path — not used)
 ml/faiss_indexes/*.index
+
+# Explicitly track prebuilt FAISS indexes and embeddings cache so Render
+# can use the fast startup path without rebuilding on every deploy.
+!data/embeddings/*.faiss
+!data/embeddings/*.pkl
