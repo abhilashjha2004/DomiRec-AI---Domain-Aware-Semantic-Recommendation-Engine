@@ -40,6 +40,15 @@ engine = DomiRecEngine()
 # ── FastAPI app ───────────────────────────────────────────────────────────────
 app = FastAPI(title="DomiRec AI API", version="1.0.0", lifespan=lifespan)
 
+# Configure CORS to allow the frontend to communicate with the API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ── Pydantic schemas ──────────────────────────────────────────────────────────
 class SearchRequest(BaseModel):
     query: str
@@ -273,11 +282,12 @@ async def refresh_indices():
 # Render's external port-scanner can reach the socket.
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 8000))
     print(f"[DomiRec] Starting uvicorn on 0.0.0.0:{port}")
     uvicorn.run(
-        "backend.main:app",
+        "main:app",
         host="0.0.0.0",
         port=port,
         reload=False,
+        app_dir=str(Path(__file__).parent)
     )

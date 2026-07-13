@@ -270,10 +270,26 @@ class DomiRecEngine:
                 os.path.join(self.embeddings_dir, "embeddings_cache.pkl")
             )
 
+            all_items_cached_and_matching = False
+            embeddings_cache = {}
             if all_indices_present and embeddings_cache_present:
+                embeddings_cache = self.load_embeddings_cache()
+                all_items_cached_and_matching = True
+                for domain, items in domain_items.items():
+                    for item in items:
+                        item_id = item["id"]
+                        item_text = self._prepare_text_for_embedding(item)
+                        text_hash = hashlib.sha256(item_text.encode('utf-8')).hexdigest()
+                        cached_data = embeddings_cache.get(item_id)
+                        if not cached_data or cached_data[1] != text_hash:
+                            all_items_cached_and_matching = False
+                            break
+                    if not all_items_cached_and_matching:
+                        break
+
+            if all_items_cached_and_matching:
                 print("[DomiRec] All FAISS indices found on disk — using fast-path load.")
                 _lazy_imports()  # imports faiss module
-                embeddings_cache = self.load_embeddings_cache()
 
                 for domain, items in domain_items.items():
                     domain_key = domain.lower()
