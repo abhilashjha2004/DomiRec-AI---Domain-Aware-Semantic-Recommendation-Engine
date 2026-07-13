@@ -4,51 +4,16 @@ services:
     env: python
     plan: free
     rootDir: .
-
-    # ── Build phase ──────────────────────────────────────────────────────────
-    # 1. Install dependencies.
-    # 2. Cache the SentenceTransformer model to disk so it is available at
-    #    runtime even when HF_HUB_OFFLINE=1.
-    # 3. Pre-build all FAISS indices so startup uses the sub-second fast-path.
-    buildCommand: |
-      pip install --upgrade pip &&
-      pip install -r backend/requirements.txt &&
-      python -c "
-      import os
-      os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/opt/render/project/src/.cache/sentence_transformers'
-      from sentence_transformers import SentenceTransformer
-      SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-      print('[Build] SentenceTransformer model cached.')
-      " &&
-      python -c "
-      import sys, os
-      sys.path.insert(0, '.')
-      os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/opt/render/project/src/.cache/sentence_transformers'
-      from ml.engine import DomiRecEngine
-      engine = DomiRecEngine()
-      engine.build_or_load_indices(force_rebuild=False)
-      print('[Build] FAISS indices ready.')
-      "
-
-    # ── Start command ────────────────────────────────────────────────────────
-    # python backend/main.py calls uvicorn.run(app, ...) directly — port is
-    # bound before the lifespan's background thread finishes, so Render's
-    # port-scan succeeds immediately.
+    buildCommand: bash build.sh
     startCommand: python backend/main.py
-
     envVars:
-      # Tell SentenceTransformers to use the pre-cached directory
       - key: SENTENCE_TRANSFORMERS_HOME
         value: /opt/render/project/src/.cache/sentence_transformers
-      # Prevent HuggingFace from hitting the network at runtime
       - key: HF_HUB_OFFLINE
         value: "1"
-      # Force unbuffered stdout so Render sees logs in real time
       - key: PYTHONUNBUFFERED
         value: "1"
-      # Silence tokenizers parallelism warning (not harmful, just noisy)
       - key: TOKENIZERS_PARALLELISM
         value: "false"
-
     healthCheckPath: /health
     autoDeploy: true
