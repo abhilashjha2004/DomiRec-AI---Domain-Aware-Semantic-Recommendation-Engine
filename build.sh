@@ -3,8 +3,8 @@
 set -e  # exit immediately on any error
 
 echo "==> [Build] Step 1: Installing dependencies..."
-pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 
 echo "==> [Build] Step 2: Caching SentenceTransformer model..."
 python -c "

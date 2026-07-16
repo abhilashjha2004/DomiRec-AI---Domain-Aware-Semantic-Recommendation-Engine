@@ -297,3 +297,8 @@ if __name__ == "__main__":
         reload=False,
         log_level="info",
     )
+@app.get("/health")
+async def health():
+    return {
+        "status": "ok"
+    }

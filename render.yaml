@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     rootDir: .
-    buildCommand: bash build.sh
+    buildCommand: bash ./build.sh
     startCommand: python backend/main.py
     envVars:
       - key: SENTENCE_TRANSFORMERS_HOME
