@@ -21,6 +21,7 @@ import {
   Star
 } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE } from '../api';
 import { useApp } from '../context/AppContext';
 import { getDomainConfig } from './Home';
 
@@ -46,7 +47,7 @@ export default function DomainExplorer() {
   useEffect(() => {
     const fetchDomains = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/domains");
+        const res = await axios.get(`${API_BASE}/domains`);
         setDomains(res.data);
         if (res.data.length > 0 && !activeDomain) {
           const stateDomain = location.state?.activeDomain;
@@ -68,7 +69,7 @@ export default function DomainExplorer() {
     const fetchContent = async () => {
       setLoadingContent(true);
       try {
-        const res = await axios.get(`http://localhost:8000/api/content?domain=${activeDomain}`);
+        const res = await axios.get(`${API_BASE}/content?domain=${activeDomain}`);
         setContentList(res.data);
       } catch (err) {
         console.error("Error loading domain contents:", err);

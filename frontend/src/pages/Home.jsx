@@ -24,6 +24,7 @@ import {
   Star
 } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE } from '../api';
 import { useApp } from '../context/AppContext';
 
 // Comprehensive domain-specific styling configurations
@@ -352,7 +353,7 @@ export default function Home() {
     setLoading(true);
     setError(false);
     try {
-      const res = await axios.get("http://localhost:8000/api/home");
+      const res = await axios.get(`${API_BASE}/home`);
       setHomeData(res.data);
     } catch (err) {
       console.error("CRITICAL ERROR: Failed to load dataset payload from home API:", err);
@@ -393,7 +394,7 @@ export default function Home() {
         <div className="space-y-2">
           <p className="text-base font-black text-slate-200 uppercase tracking-wider">Backend Offline</p>
           <p className="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">
-            Cannot connect to the DomiRec AI engine at <span className="text-slate-400 font-mono">localhost:8000</span>. Make sure the FastAPI server is running.
+            Cannot connect to the DomiRec AI engine. Make sure the API server is running.
           </p>
         </div>
         <button

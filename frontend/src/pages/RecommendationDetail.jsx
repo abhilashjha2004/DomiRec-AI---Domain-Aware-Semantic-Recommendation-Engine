@@ -25,6 +25,7 @@ import {
   Star
 } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE } from '../api';
 import { useApp } from '../context/AppContext';
 import { getDomainConfig } from './Home';
 
@@ -61,7 +62,7 @@ export default function RecommendationDetail() {
       setError(null);
       try {
         // 1. Fetch current content detail
-        const contentRes = await axios.get(`http://localhost:8000/api/content/${contentId}`);
+        const contentRes = await axios.get(`${API_BASE}/content/${contentId}`);
         const item = contentRes.data;
         setActiveItem(item);
         
@@ -70,7 +71,7 @@ export default function RecommendationDetail() {
         setDomainLock(true);
 
         // 2. Fetch locked recommendations
-        const recsRes = await axios.post(`http://localhost:8000/api/recommendations`, {
+        const recsRes = await axios.post(`${API_BASE}/recommendations`, {
           content_id: item.id,
           domain_lock: true,
           personalize: false
@@ -78,7 +79,7 @@ export default function RecommendationDetail() {
         setRecommendations(recsRes.data);
 
         // 3. Fetch related roadmap graph
-        const pathRes = await axios.get(`http://localhost:8000/api/learning-paths?root_id=${item.id}`);
+        const pathRes = await axios.get(`${API_BASE}/learning-paths?root_id=${item.id}`);
         setLearningPath(pathRes.data);
 
       } catch (err) {

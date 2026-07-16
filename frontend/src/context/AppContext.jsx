@@ -1,9 +1,8 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { API_BASE } from '../api';
 
 const AppContext = createContext();
-
-const API_BASE = "http://localhost:8000/api";
 
 export const AppProvider = ({ children }) => {
   const [currentDomain, setCurrentDomain] = useState(localStorage.getItem('currentDomain') || 'Education');

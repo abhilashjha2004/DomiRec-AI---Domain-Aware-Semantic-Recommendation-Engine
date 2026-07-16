@@ -28,6 +28,7 @@ import {
 import { useApp } from '../context/AppContext';
 import { getDomainConfig } from './Home';
 import axios from 'axios';
+import { API_BASE } from '../api';
 
 // Helper to get domain icons dynamically
 const getDomainIcon = (domainName) => {
@@ -151,7 +152,7 @@ export default function Search() {
   useEffect(() => {
     const fetchDomains = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/domains");
+        const res = await axios.get(`${API_BASE}/domains`);
         setDomains(res.data);
       } catch (err) {
         console.error("Error fetching domains:", err);
@@ -178,7 +179,7 @@ export default function Search() {
     localStorage.setItem('domirec_recent_searches', JSON.stringify(updatedRecents));
 
     try {
-      const res = await axios.post("http://localhost:8000/api/content/search", {
+      const res = await axios.post(`${API_BASE}/content/search`, {
         query: searchQuery,
         domain_lock: true,
         current_domain: targetDomain
